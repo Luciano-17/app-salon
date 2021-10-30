@@ -1,0 +1,6 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.titulo-pagina {
+    margin: v.$separacion 0;
+}

@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobreMi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contenedor-sobreMi {
+        margin-bottom: v.$separacion;
+    
+        .titulo-sobreMi {
+            margin-bottom: v.$separacion;
+        }
+        .texto-sobreMi {
+    
+            .presentacion {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                .imagen-sobreMi {
+                    width: 50%;
+                    margin-bottom: calc(v.$separacion / 2);
+                    transition: 500ms width;
+    
+                    @include m.tablet {
+                        width: 20%;
+                    }
+    
+                    &:hover {
+                        width: 65%;
+    
+                        @include m.tablet {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
